@@ -18,6 +18,6 @@ jobs:
         username: ${{ secrets.QUAY_USERNAME }}
         password: ${{ secrets.QUAY_ROBOT_TOKEN }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag quay.io/j1cken/offlineimap:$(date +%s)
+      run: docker build . --file Dockerfile --tag quay.io/j1cken/offlineimap:latest
     - name: Push to Quay.io
-      run: docker push quay.io/j1cken/offlineimap:$(date +%s)
+      run: docker push quay.io/j1cken/offlineimap:latest
